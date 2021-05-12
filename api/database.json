@@ -1,0 +1,22 @@
+{
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude"
+    },
+    {
+      "id": 2,
+      "name": "Merle"
+    }
+  ],
+  "completions": [],
+  "requests": [
+    {
+      "description": "Fix my life, please.",
+      "address": "123 my ass lane",
+      "budget": "300.00",
+      "neededBy": "2021-05-27",
+      "id": 1
+    }
+  ]
+}

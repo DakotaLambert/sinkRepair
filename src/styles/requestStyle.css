@@ -1,0 +1,24 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+  
+  #submitRequest {
+    padding: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    background-color: rgb(73, 55, 156);
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+    font-family: "Comfortaa";
+    box-shadow: 0.25rem 0.25rem 0.5rem black;
+  }
+  
+
+  #container {
+
+      margin: 3rem;
+      
+  }
