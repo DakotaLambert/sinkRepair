@@ -9,13 +9,21 @@
       "name": "Merle"
     }
   ],
-  "completions": [],
+  "completions": [
+    {
+      "requestId": "1",
+      "plumberName": "Maude",
+      "date_created": "2:04:12 PM | 5/13/2021",
+      "id": 1
+    }
+  ],
   "requests": [
     {
-      "description": "Fix my life, please.",
-      "address": "123 my ass lane",
-      "budget": "300.00",
-      "neededBy": "2021-05-27",
+      "description": "monke",
+      "address": "monke road",
+      "budget": "42069.00",
+      "neededBy": "2021-05-21",
+      "isCompleted": false,
       "id": 1
     }
   ]
