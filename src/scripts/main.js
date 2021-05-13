@@ -11,6 +11,7 @@ export const renderRequests = () => {
       mainContainer.innerHTML = SinkRepair();
     });
 };
+
 mainContainer.addEventListener("click", (click) => {
   if (click.target.id.startsWith("request--")) {
     const [, requestId] = click.target.id.split("--");

@@ -1,6 +1,6 @@
 import { renderRequests } from "./main.js";
 
-const applicationState = {
+export const applicationState = {
   requests: [],
   plumbers: [],
   completions: []
@@ -34,6 +34,13 @@ export const fetchCompletions = () => {
 };
 
 export const getRequests = () => {
+
+    let isComplete = [...applicationState.requests]
+    
+    isComplete.sort((current, next) => {
+        return current.completed - next.completed
+    })
+
   return [...applicationState.requests];
 };
 export const getPlumbers = () => {
