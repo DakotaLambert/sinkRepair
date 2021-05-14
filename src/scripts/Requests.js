@@ -1,4 +1,4 @@
-import { getPlumbers, getRequests, saveCompletion, applicationState } from "./dataAccess.js";
+import { getPlumbers, getRequests, saveCompletion } from "./dataAccess.js";
 
 const mainContainer = document.querySelector("#container");
 
@@ -35,9 +35,10 @@ export const Requests = () => {
 mainContainer.addEventListener("change", (event) => {
   if (event.target.id === "plumbers") {
     const [requestId, plumberName] = event.target.value.split("--");
+    const requestIdNumber = parseInt(requestId)
 
     const completion = {
-      requestId,
+      requestId: requestIdNumber,
       plumberName,
       date_created: new Date().toLocaleTimeString() + " | " + new Date().toLocaleDateString(),
     };
@@ -48,6 +49,7 @@ mainContainer.addEventListener("change", (event) => {
                 to the `completions` resource for your API. Send the
                 completion object as a parameter.
              */
+            
   }
 });
 

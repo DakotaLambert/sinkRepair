@@ -18,10 +18,5 @@ mainContainer.addEventListener("click", (click) => {
     deleteRequest(parseInt(requestId));
   }
 });
-// mainContainer.addEventListener(
-//   "stateChanged",
-//   customEvent => {
-//       renderRequests()
-//   }
-// )
+
 renderRequests();
