@@ -43,7 +43,7 @@ mainContainer.addEventListener("click", clickEvent => {
             address: userAddress,
             budget: userBudget,
             neededBy: userDate,
-            isCompleted: false
+           
         }
 
         // Send the data to the API for permanent storage
