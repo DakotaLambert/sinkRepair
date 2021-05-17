@@ -1,6 +1,6 @@
 //this module keeps two different states in sync
 
-import { renderRequests } from "./main.js";
+// import { renderRequests } from "./main.js";
 
 export const applicationState = {
   requests: [],
@@ -47,9 +47,9 @@ export const fetchCompletions = () => {
     });
 };
 
-
-
-
+export const getCompletions = () => {
+  return [...applicationState.completions]
+}
 
 export const getRequests = () => {
 
@@ -59,13 +59,14 @@ export const getRequests = () => {
       return request
 
   }).sort((c,n) => {
+    
     return c.completed - n.completed
   })
 
-  console.log(requestsWithCompletion)
   return requestsWithCompletion
-
+  
 };
+
 
 export const sendRequest = (userServiceRequest) => {
   const fetchOptions = {
@@ -128,17 +129,12 @@ export const saveCompletion = (completionId) => {
 
 const mainContainer = document.querySelector("#container");
 
-mainContainer.addEventListener("stateChanged", () => {
-  renderRequests();
+mainContainer.addEventListener("click", (click) => {
+  if (click.target.id.startsWith("request--")) {
+    const [, requestId] = click.target.id.split("--");
+    deleteRequest(parseInt(requestId));
+  }
 });
-
-
-export const newObject = () => {
-  
-}
-
-
-
 
 export const deleteRequest = (id) => {
   return fetch(`${API}/requests/${id}`, { method: "DELETE" }).then(() => {

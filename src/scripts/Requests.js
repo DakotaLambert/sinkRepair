@@ -5,16 +5,18 @@ const mainContainer = document.querySelector("#container");
 export const Requests = () => {
   const requests = getRequests();
   const plumbers = getPlumbers();
+ 
   return `
   
   ${requests
     .map((requestObject) => {
       return `
-      <li>
+      <li id="listItems">
+      <div>
       ${requestObject.description}
-      
+      </div>
       <select class="plumbers" id="plumbers">
-      <option value="">Choose Plumber</option>
+      <option value="">Completed By</option>
       ${plumbers.map((plumbers) => {
         return `<option value="${requestObject.id}--${plumbers.name}">${plumbers.name}</option>`;
       })}
@@ -22,7 +24,7 @@ export const Requests = () => {
         <button class="request__delete" id="request--${requestObject.id}">
       Delete
       </button>
-
+    
       </select>
       </li>
       `;
