@@ -1,6 +1,6 @@
 import { fetchPlumbers, fetchRequests } from "./dataAccess.js";
 import { SinkRepair } from "./SinkRepair.js";
-import { deleteRequest } from "./dataAccess.js";
+// import { deleteRequest } from "./dataAccess.js";
 
 const mainContainer = document.querySelector("#container");
 
@@ -12,11 +12,14 @@ export const renderRequests = () => {
     });
 };
 
-mainContainer.addEventListener("click", (click) => {
-  if (click.target.id.startsWith("request--")) {
-    const [, requestId] = click.target.id.split("--");
-    deleteRequest(parseInt(requestId));
-  }
+
+
+mainContainer.addEventListener("stateChanged", () => {
+  renderRequests();
 });
 
-renderRequests();
+renderRequests()
+// mainContainer.addEventListener("stateChanged",
+// customEvent => {
+//   renderRequests()
+// })

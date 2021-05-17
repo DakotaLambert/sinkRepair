@@ -15,10 +15,19 @@
     font-family: "Comfortaa";
     box-shadow: 0.25rem 0.25rem 0.5rem black;
   }
-  
 
-  #container {
 
-      margin: 3rem;
-      
-  }
+
+
+  /* .plumbers, .requestDelete {
+    display: flex;
+  } */
+  /* #requests {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  /* #plumbers, #request-- {
+    display: flex;
+    flex-direction: column;
+  } */

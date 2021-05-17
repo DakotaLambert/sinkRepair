@@ -23,3 +23,9 @@ h6 {
   letter-spacing: 2px;
 }
 
+li {
+  list-style-type: none;
+  margin-top: 2.5rem;
+  border: solid 2px;
+  padding: 2rem;
+}
